@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Maps</title>
+
+    <style>
+        .img-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 97vh;
+        }
+        h2{
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="img-container">
+        <h2>Just try to <q><u>tap on the delicious tomato chutney</u></q>....</h2>
+        <img src="dish.jpg" alt="" usemap="#dish" width="600px" height="500px">
+
+        <map name="dish">
+            <area shape="circle" coords="350,175,160" href="resta.html" alt="" onclick="dish()">
+        </map>
+    </div>
+
+    <div class="img-container">
+        <h2>Now try to <q><u>tap on the this application</u></q>....</h2>
+        <img src="https://img.freepik.com/free-vector/instagram-icon_1057-2227.jpg?size=626&ext=jpg&ga=GA1.1.1144087018.1699349935&semt=sph" alt="" usemap="#insta" width="400px" height="400px">
+
+        <map name="insta">
+            <area shape="poly" coords="80,80,320,80,80,320,320,320" href="insta.html" alt="" onclick="app()">
+        </map>
+    </div>
+
+    <div class="img-container">
+        <h2>Now try to <q><u>tap on the this</u></q>....</h2>
+        <img src="https://img.freepik.com/premium-psd/diwali-candle-icon-vector-image_893496-165.jpg?size=626&ext=jpg&ga=GA1.1.1144087018.1699349935&semt=sph" alt="" usemap="#lamp" width="400px" height="500px">
+
+        <map name="lamp">
+            <area shape="rect" coords="0,0,400,500" href="lamp.html" alt="" onclick="lamp()">
+        </map>
+    </div>
+
+    <script>
+        function dish(){
+            alert("You clicked on dish!")
+        }
+
+        function app(){
+            alert("You clicked on Insta application!")
+        }
+
+        function lamp(){
+            alert("You clicked on Lamp!")
+        }
+    </script>
+</body>
+</html>
